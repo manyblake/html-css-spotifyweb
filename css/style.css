@@ -65,8 +65,31 @@ header {
   aspect-ratio: 1;
 }
 
-.main-nav__list {
+.nav-list__name {
   display: none;
+}
+
+.nav-list__icon {
+  display: block;
+}
+
+.playlists {
+  display: none;
+}
+
+.header__footer {
+  display: none;
+}
+
+.main-nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.main-nav__list i {
+  color: var(--light-grey);
+  font-size: 1.25rem;
 }
 
 .button {
@@ -88,10 +111,19 @@ header {
     width: 190px;
   }
 
-  .main-nav__list {
+  .nav-list__name {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+  }
+
+  .playlists {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__footer {
+    display: flex;
+    flex-direction: column;
   }
 }
 
