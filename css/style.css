@@ -27,7 +27,6 @@ img {
   width: 100%;
 }
 
-
 body {
   height: 100vh;
   background-color: var(--medium-dark-grey);
@@ -266,7 +265,8 @@ header {
   aspect-ratio: 1;
 }
 
-#duration__actual, #volume {
+#duration__actual,
+#volume {
   background-color: #5a5a5a;
   border-radius: 0.5rem;
   border: none;
@@ -285,12 +285,12 @@ header {
 }
 
 #duration__actual::-webkit-progress-bar {
-  background:#5a5a5a;
+  background: #5a5a5a;
   border-radius: 0.5rem;
 }
 
 #volume::-webkit-progress-bar {
-  background:#5a5a5a;
+  background: #5a5a5a;
   border-radius: 0.5rem;
 }
 
@@ -304,8 +304,12 @@ header {
   border-radius: 0.5rem;
 }
 
+.content:last-of-type {
+  margin-bottom: 90px;
+}
+
 .content__navbar {
-  padding: 7rem 1.80rem 1.25rem;
+  padding: 7rem 1.8rem 1.25rem;
   text-transform: uppercase;
   color: var(--light-grey);
   font-size: 0.65rem;
@@ -319,39 +323,52 @@ header {
   margin-bottom: 3rem;
 }
 
-.recently-played {
-  padding: 1.125rem 1.125rem 90px;
+.recently-played,
+.created-for-user,
+.artist-most-popular {
+  padding: 1.125rem;
   color: var(--light-grey);
 }
 
-.recently-played__row {
+.section-row {
   display: flex;
   flex-wrap: wrap;
 }
 
-.recently-played__card {
-  flex-basis: calc(50% - 0.250rem);
+.card {
+  flex-basis: calc(50% - 0.25rem);
   padding: 0.125rem;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
-.recently-played__title {
+.section-title {
   margin-bottom: 1.75rem;
   color: white;
   font-size: 1.5rem;
 }
 
-.recently-played__card-title {
+.section-subtitle {
+  margin-bottom: 1.75rem;
+}
+
+.recently-played__card-title,
+.created-for-user__card-title,
+.artist-most-popular__card-title {
   margin: 1rem 0 0.75rem;
   color: white;
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 
 .recently-played__card-subtitle {
   margin-bottom: 0.75rem;
-  font-size: 1rem;
+  font-size: 0.75rem;
+}
+
+.artist-most-popular__img-box {
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 /* Media queries */
@@ -404,17 +421,22 @@ header {
   }
 
   .app-installation-button {
-  border-bottom: 1px solid var(--light-grey);
+    border-bottom: 1px solid var(--light-grey);
+  }
 }
 
 @media screen and (min-width: 879px) {
   .recently-played__card {
-    flex-basis: calc(25% - 0.250rem);
+    flex-basis: calc(25% - 0.25rem);
+  }
+
+  .card {
+    max-width: calc(25% - 0.25rem);
   }
 }
 
 @media screen and (min-width: 1440px) {
-   .recently-played__card {
-    flex-basis: calc((100% - 0.250rem) /6);
+  .card {
+    flex-basis: calc((100% - 0.25rem) / 6);
   }
 }
