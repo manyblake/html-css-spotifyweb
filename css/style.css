@@ -258,6 +258,7 @@ header {
   align-items: center;
   gap: 0.5rem;
   flex-basis: 190px;
+  flex-shrink: 0;
 }
 
 .toolbar i:not([class~="fa-circle-play"]) {
@@ -301,6 +302,56 @@ header {
 #volume::-webkit-progress-value {
   background: #c1c1c1;
   border-radius: 0.5rem;
+}
+
+.content__navbar {
+  padding: 7rem 1.80rem 1.25rem;
+  text-transform: uppercase;
+  color: var(--light-grey);
+  font-size: 0.65rem;
+}
+
+.content__navbar ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.recently-played {
+  padding: 1.125rem 1.125rem 90px;
+  color: var(--light-grey);
+}
+
+.recently-played__row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.recently-played__card {
+  flex-basis: calc(50% - 0.250rem);
+  padding: 0.125rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.recently-played__title {
+  margin-bottom: 1.75rem;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.recently-played__card-title {
+  margin: 1rem 0 0.75rem;
+  color: white;
+  font-size: 1.125rem;
+}
+
+.recently-played__card-subtitle {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
 }
 
 /* Media queries */
@@ -357,7 +408,13 @@ header {
 }
 
 @media screen and (min-width: 879px) {
+  .recently-played__card {
+    flex-basis: calc(25% - 0.250rem);
+  }
 }
 
 @media screen and (min-width: 1440px) {
+   .recently-played__card {
+    flex-basis: calc((100% - 0.250rem) /6);
+  }
 }
