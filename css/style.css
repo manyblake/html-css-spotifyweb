@@ -33,27 +33,42 @@ body {
 .main-wrapper {
   display: flex;
   flex-grow: 1;
+  overflow: hidden;
 }
 
 aside {
   height: 90px;
   background-color: var(--grey);
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  padding: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  color: white;
 }
 
 main {
   flex-grow: 1;
+  overflow: auto;
 }
 
 header {
-  padding: 1.25rem;
+  padding: 1.25rem 1.25rem 7rem 1.25rem;
   background-color: #080b12;
   color: var(--light-grey);
   font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .upgrade {
   background-color: rgba(0, 0, 0, 0.3);
   display: flex;
+  position: fixed;
+  width: calc(100% - 80px);
 }
 
 .logo-lg {
@@ -78,7 +93,7 @@ header {
   display: none;
 }
 
-.header__footer {
+.hd-footer-list__name {
   display: none;
 }
 
@@ -118,6 +133,7 @@ header {
   font-size: 1.75rem;
   width: 1.75rem;
   display: inline-block;
+  fill: var(--light-grey);
 }
 
 .button {
@@ -153,7 +169,7 @@ header {
   display: flex;
   align-items: center;
   gap: 0.85rem;
-  border-bottom: 1px solid var(--light-grey);
+
   padding-bottom: 0.85rem;
   margin-bottom: 0.85rem;
 }
@@ -171,26 +187,37 @@ header {
   color: white;
 }
 
+.header__footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  align-items: center;
+}
+
 .header__footer li a {
   font-weight: 700;
 }
 
+.current-song {
+  display: flex;
+}
+
+.current-song__info {
+  display: flex;
+  flex-direction: column;
+}
+
 /* Media queries */
-@media screen and (min-width: 639px) {
+@media screen and (min-width: 550px) {
   header {
     width: 190px;
-    display: flex;
-    flex-direction: column;
+    align-items: flex-start;
   }
 
   .header__logo-box {
     height: 2.5rem;
     width: 9rem;
     margin-bottom: 2rem;
-  }
-
-  .header__footer {
-    margin-top: auto;
   }
 
   .logo-lg {
@@ -212,11 +239,6 @@ header {
     flex-direction: column;
   }
 
-  .header__footer {
-    display: flex;
-    flex-direction: column;
-  }
-
   .main-nav__list {
     align-items: flex-start;
   }
@@ -225,6 +247,17 @@ header {
     display: flex;
     align-items: center;
   }
+
+  .upgrade {
+    width: calc(100% - 190px);
+  }
+
+  .hd-footer-list__name {
+    display: flex;
+  }
+
+  .app-installation-button {
+  border-bottom: 1px solid var(--light-grey);
 }
 
 @media screen and (min-width: 879px) {

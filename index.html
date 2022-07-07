@@ -36,7 +36,6 @@
                 ><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z"
-                    fill="#ffffff"
                   /></svg
                 ><span class="nav-list__name"> Home</span></a
               >
@@ -47,7 +46,6 @@
                 ><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z"
-                    fill="#ffffff"
                     fill-rule="evenodd"
                   /></svg
                 ><span class="nav-list__name"> Cerca</span></a
@@ -59,7 +57,6 @@
                 ><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z"
-                    fill="#ffffff"
                   /></svg
                 ><span class="nav-list__name"> La tua libreria</span></a
               >
@@ -86,15 +83,15 @@
         <ul class="header__footer">
           <li>
             <a class="app-installation-button" href="#"
-              ><i class="border-circle fa-solid fa-arrow-down"></i> Installa
-              app</a
+              ><i class="border-circle fa-solid fa-arrow-down"></i>
+              <span class="hd-footer-list__name"> Installa app</span></a
             >
           </li>
 
           <li>
             <a class="user-button" href="#"
               ><i class="border-circle border-circle-lg fa-regular fa-user"></i>
-              John Doe</a
+              <span class="hd-footer-list__name"> John Doe</span></a
             >
           </li>
         </ul>
@@ -108,9 +105,38 @@
     </div>
 
     <aside>
-      <div></div>
-      <div></div>
-      <div></div>
+      <div class="current-song">
+        <div class="current-song__img-box">
+          <img src="#" alt="immagine album" />
+        </div>
+
+        <div class="current-song__info">
+          <h4 class="current-song__author">Sinister</h4>
+          <p class="current-song__title">Brano Nome</p>
+        </div>
+
+        <div class="current-song__favorite">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-regular fa-folder"></i>
+        </div>
+      </div>
+
+      <div class="song">
+        <div class="song__actions">
+          <i class="fa-solid fa-shuffle"></i>
+          <i class="fa-solid fa-backward-step"></i>
+          <i class="fa-regular fa-circle-play"></i>
+          <i class="fa-solid fa-forward-step"></i>
+          <i class="fa-solid fa-rotate-right"></i>
+        </div>
+        <div class="duration"></div>
+      </div>
+
+      <div class="actions">
+        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-tv"></i>
+        <i class="fa-solid fa-volume-high"></i>
+      </div>
     </aside>
   </body>
 </html>
