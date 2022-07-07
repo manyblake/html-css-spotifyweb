@@ -23,6 +23,11 @@ a {
   text-decoration: none;
 }
 
+img {
+  width: 100%;
+}
+
+
 body {
   height: 100vh;
   background-color: var(--medium-dark-grey);
@@ -36,17 +41,18 @@ body {
   overflow: hidden;
 }
 
-aside {
+.toolbar {
   height: 90px;
   background-color: var(--grey);
   position: fixed;
   width: 100%;
   left: 0;
   bottom: 0;
-  padding: 1.25rem;
+  padding: 1.25rem 0;
   display: flex;
   justify-content: space-between;
   color: white;
+  align-items: center;
 }
 
 main {
@@ -200,11 +206,101 @@ header {
 
 .current-song {
   display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  padding-left: 1.25rem;
+  min-width: 190px;
+}
+
+.current-song__img-box {
+  width: 2.5rem;
 }
 
 .current-song__info {
   display: flex;
   flex-direction: column;
+  font-size: 0.7rem;
+}
+
+.current-song__favorite {
+  margin-left: auto;
+}
+
+.song {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.song__actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.fa-circle-play {
+  font-size: 1.95rem;
+}
+
+.duration {
+  display: flex;
+  font-size: 0.7rem;
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-basis: 190px;
+}
+
+.toolbar i:not([class~="fa-circle-play"]) {
+  width: 1rem;
+  aspect-ratio: 1;
+}
+
+#duration__actual, #volume {
+  background-color: #5a5a5a;
+  border-radius: 0.5rem;
+  border: none;
+  width: 50%;
+  height: 0.25rem;
+}
+
+#duration__actual::-moz-progress-bar {
+  background: #c1c1c1;
+  border-radius: 0.5rem;
+}
+
+#volume::-moz-progress-bar {
+  background: #c1c1c1;
+  border-radius: 0.5rem;
+}
+
+#duration__actual::-webkit-progress-bar {
+  background:#5a5a5a;
+  border-radius: 0.5rem;
+}
+
+#volume::-webkit-progress-bar {
+  background:#5a5a5a;
+  border-radius: 0.5rem;
+}
+
+#duration__actual::-webkit-progress-value {
+  background: #c1c1c1;
+  border-radius: 0.5rem;
+}
+
+#volume::-webkit-progress-value {
+  background: #c1c1c1;
+  border-radius: 0.5rem;
 }
 
 /* Media queries */

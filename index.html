@@ -104,10 +104,10 @@
       </main>
     </div>
 
-    <aside>
+    <aside class="toolbar">
       <div class="current-song">
         <div class="current-song__img-box">
-          <img src="#" alt="immagine album" />
+          <img src="img/sinister.jpeg" alt="immagine album" />
         </div>
 
         <div class="current-song__info">
@@ -129,13 +129,19 @@
           <i class="fa-solid fa-forward-step"></i>
           <i class="fa-solid fa-rotate-right"></i>
         </div>
-        <div class="duration"></div>
+
+        <div class="duration">
+          <p class="duration__elapsed">0:25</p>
+          <progress id="duration__actual" value="12" max="100"></progress>
+          <p class="duration__remaining">4:35</p>
+        </div>
       </div>
 
       <div class="actions">
         <i class="fa-solid fa-bars"></i>
         <i class="fa-solid fa-tv"></i>
         <i class="fa-solid fa-volume-high"></i>
+        <progress id="volume" value="12" max="100"></progress>
       </div>
     </aside>
   </body>
