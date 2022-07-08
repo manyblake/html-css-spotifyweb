@@ -100,6 +100,11 @@ header {
   display: none;
 }
 
+.playlists__list {
+  overflow: auto;
+  width: 100%;
+}
+
 .hd-footer-list__name {
   display: none;
 }
@@ -286,6 +291,7 @@ header {
   flex-direction: column;
   margin-top: auto;
   align-items: center;
+  padding-top: 1rem;
 }
 
 .header__footer li a {
@@ -527,6 +533,7 @@ header {
 
   .upgrade {
     width: calc(100% - 190px);
+    z-index: 1;
   }
 
   .upgrade__button:hover {
