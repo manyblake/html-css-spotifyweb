@@ -371,8 +371,7 @@ header {
   aspect-ratio: 1;
 }
 
-#duration__actual,
-#volume {
+.progress-bar {
   background-color: #5a5a5a;
   border-radius: 0.5rem;
   border: none;
@@ -380,38 +379,41 @@ header {
   height: 0.25rem;
 }
 
-#duration__actual::-moz-progress-bar {
-  background: #c1c1c1;
+.actual-progress {
+  background-color: #c1c1c1;
   border-radius: 0.5rem;
+  width: 25%;
+  height: 0.25rem;
+  position: relative;
 }
 
-#volume::-moz-progress-bar {
-  background: #c1c1c1;
-  border-radius: 0.5rem;
+.circle-to-drag {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 50%;
+  transform: translate(50%, -50%);
+  display: none;
 }
 
-#duration__actual::-webkit-progress-bar {
-  background: #5a5a5a;
-  border-radius: 0.5rem;
+.duration:hover .actual-progress,
+.volume:hover .actual-progress {
+  background-color: var(--light-green);
 }
 
-#volume::-webkit-progress-bar {
-  background: #5a5a5a;
-  border-radius: 0.5rem;
-}
-
-#duration__actual::-webkit-progress-value {
-  background: #c1c1c1;
-  border-radius: 0.5rem;
-}
-
-#volume::-webkit-progress-value {
-  background: #c1c1c1;
-  border-radius: 0.5rem;
+.duration:hover .circle-to-drag,
+.volume:hover .circle-to-drag {
+  display: block;
 }
 
 .content:last-of-type {
   margin-bottom: 90px;
+}
+
+.volume {
+  display: contents;
 }
 
 .content__navbar {
@@ -512,6 +514,10 @@ header {
 
   .main-nav__list {
     align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
   }
 
   .nav-list__link {
